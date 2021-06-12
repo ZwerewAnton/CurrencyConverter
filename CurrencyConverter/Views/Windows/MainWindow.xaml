@@ -5,8 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurrencyConverter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Конвертер валют" Height="450" Width="400" MinHeight="450" MinWidth="400">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*" >
+            </RowDefinition>
+            <RowDefinition Height="0.4*">
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="*">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox 
+            Foreground="Black"  
+            Background="white" 
+            x:Name="leftValueBox" 
+            Grid.Column="0" Grid.Row="0" 
+            VerticalAlignment="Center"
+            FontSize="16"
+            MaxLength="15" Margin="23,35"
+            />
+        <TextBox  
+            Foreground="Black"  
+            Background="white" 
+            x:Name="rightValueBox" 
+            Grid.Column="1" 
+            Grid.Row="0" 
+            VerticalAlignment="Center" 
+            FontSize="16"
+            MaxLength="15" Margin="23,35"/>
+        <TextBlock 
+            TextTrimming="WordEllipsis" 
+            Foreground="Black" 
+            x:Name="leftCurrencyName" 
+            Grid.Column="0" 
+            Grid.Row="1" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            FontSize="16"/>
+        <TextBlock 
+            TextTrimming="WordEllipsis" 
+            Foreground="Black" 
+            x:Name="rightCurrencyName" 
+            Grid.Column="1" 
+            Grid.Row="1" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            FontSize="16"/>
+
+        <Button 
+            Background="White" 
+            Foreground ="MediumBlue"
+            Content="Изменить валюту" 
+            x:Name="leftValuteButton" 
+            Grid.Column="0" 
+            Grid.Row="2" 
+            HorizontalAlignment="Center" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"
+            FontSize="16" Margin="23,0" Height="50" VerticalAlignment="Top" Width="150"/>
+        <Button 
+            Background="Gray" 
+            Foreground ="Black"
+            Content="Изменить валюту" 
+            x:Name="rightValuteButton" 
+            Grid.Column="1" 
+            Grid.Row="2" 
+            HorizontalAlignment="Center" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"
+            FontSize="16" Margin="23,0" Height="50" VerticalAlignment="Top" Width="150"/>
     </Grid>
 </Window>
